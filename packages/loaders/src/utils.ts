@@ -1,5 +1,6 @@
 import buildDebug from 'debug';
 import _ from 'lodash';
+import { realRequire } from 'real-require';
 
 import { pluginUtils } from '@verdaccio/core';
 import { logger } from '@verdaccio/logger';
@@ -26,7 +27,7 @@ export function isES6<T>(plugin: PluginType<T>): boolean {
 export function tryLoad<T>(path: string): PluginType<T> | null {
   try {
     debug('loading plugin %s', path);
-    return require(path) as PluginType<T>;
+    return realRequire(path) as PluginType<T>; // webpack-ignore
   } catch (err: any) {
     if (err.code === MODULE_NOT_FOUND) {
       debug('plugin %s not found', path);

@@ -15,6 +15,7 @@
   "dependencies": {
     "@verdaccio/logger": "workspace:6.0.0-6-next.19",
     "debug": "4.3.4",
+    "real-require": "0.2.0",
     "lodash": "4.17.21"
   },
   "devDependencies": {

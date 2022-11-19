@@ -6,7 +6,7 @@ declare module 'pretty-format' {
 declare module '@jest/schemas' {
   export type SnapshotFormat = any;
 }
-
+declare module 'real-require';
 // declare module '@szmarczak/http-timer';
 // declare module 'cacheable-lookup';
 // // declare module 'p-cancelable';
